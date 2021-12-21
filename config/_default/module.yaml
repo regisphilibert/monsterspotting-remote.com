@@ -1,0 +1,5 @@
+mounts:
+  - source: content
+    target: content
+  - source: remote/public/monster
+    target: content/monster

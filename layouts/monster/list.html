@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <div class="text-3xl mb-4">
+    {{ partialCached "stats" . }}
+  </div>
+  {{ $paginator := .Paginate (.Pages.ByParam "generation") 20 }}
+  <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-8">
+    {{ range $paginator.Pages }}
+      {{ .Render "li" }}
+    {{ end }}
+  </div>
+  {{ template "_internal/pagination.html" . }}
+{{ end }}

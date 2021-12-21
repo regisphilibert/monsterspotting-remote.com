@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+svg{
+  width: 100%;
+}
+
+.pagination{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  .page-item{
+    padding: 1rem;
+    &.active{
+      font-weight: 700;
+    }
+  }
+}

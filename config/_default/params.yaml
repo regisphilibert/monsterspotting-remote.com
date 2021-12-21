@@ -1,0 +1,24 @@
+credits: |-
+  Monster __SVGs__ by [Pixel Encounter](https://pixelencounter.com/Api/SvgMonsters)
+
+  Brand font is Museo Moderno by [Omnibus Type](https://www.omnibus-type.com/) licensed under the [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+
+  Dummy metadata generated using [Mockaroo](https://www.mockaroo.com/)
+tnd_styles:
+  fonts:
+  - family: MuseoModerno
+    file: fonts/MuseoModerno-Regular
+    weight: 400
+    style: normal
+  - family: MuseoModerno
+    file: fonts/MuseoModerno-SemiBold
+    weight: 600
+    style: normal
+  - family: MuseoModerno
+    file: fonts/MuseoModerno-Bold
+    weight: 700
+    style: normal
+  - family: MuseoModerno
+    file: fonts/MuseoModerno-Black
+    weight: 900
+    style: normal

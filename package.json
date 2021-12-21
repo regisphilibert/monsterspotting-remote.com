@@ -1,0 +1,18 @@
+{
+ "comments": {
+  "dependencies": {},
+  "devDependencies": {
+   "@tailwindcss/typography": "github.com/theNewDynamic/hugo-module-tnd-styles",
+   "postcss-cli": "github.com/theNewDynamic/hugo-module-tnd-styles",
+   "postcss-import": "github.com/theNewDynamic/hugo-module-tnd-styles",
+   "tailwindcss": "github.com/theNewDynamic/hugo-module-tnd-styles"
+  }
+ },
+ "dependencies": {},
+ "devDependencies": {
+  "postcss-cli": "^7.1.0",
+  "tailwindcss": "^2.0.2"
+ },
+ "name": "monsters-front",
+ "version": "0.1.0"
+}

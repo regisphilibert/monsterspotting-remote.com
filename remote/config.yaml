@@ -1,0 +1,12 @@
+disableKinds:
+- sitemap
+- taxonomy
+- term
+outputs:
+  home:
+  - html
+caches:
+  getresource:
+    maxAge: 0
+params:
+  file_format: json

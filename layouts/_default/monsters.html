@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <div class="text-3xl mb-4">
+    {{ partialCached "stats" . }}
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-8">
+    {{ range partialCached "func/GetMonsterPages" "GetMonsterPages" }}
+      {{ partialCached "monster" . . }}
+    {{ end }}
+  </div>
+{{ end }}

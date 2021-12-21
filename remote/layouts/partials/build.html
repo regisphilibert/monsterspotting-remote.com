@@ -1,0 +1,28 @@
+
+{{ $format := "json" }}
+{{ with resources.GetRemote "https://monsters-api.netlify.app/?v=2" }} 
+  {{ with .Content | unmarshal }}
+    {{ range . }}
+      {{ $monster := dict 
+        "id" .id
+        "league" .league
+        "title" .title
+        "spotted" .spotted
+        "svg" .svg
+        "content" .content
+        "generation" .generation
+      }}
+      {{ $filename := printf "monster/%s.md" (urlize .title) }}
+      {{ $file := dict }}
+      {{ if eq $format "json" }}
+        {{ $string := print (jsonify $monster) " " .content }}
+        {{ $file = $string | resources.FromString $filename }}
+      {{ else }}
+        {{ $yaml_template := resources.Get "monster.yaml" }}
+        {{ $file = $yaml_template | resources.ExecuteAsTemplate $filename $monster }}
+      {{ end }}
+      {{ $output := $file.RelPermalink }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ return true }}

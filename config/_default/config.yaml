@@ -1,0 +1,7 @@
+baseURL: https://monsterspotting.netlify.app
+languageCode: en-us
+title: Monsterspotting
+paginate: 10
+caches:
+  getresource:
+    maxAge: 0

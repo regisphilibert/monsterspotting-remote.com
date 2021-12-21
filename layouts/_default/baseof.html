@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="{{ site.Language.Lang }}" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <title>{{ .Title }}{{ if not .IsHome }} | {{ site.Title }}{{ end }}</title>
+    {{ hugo.Generator }}
+    {{ with resources.Get "css/style.scss" }}
+      {{ $css := . | resources.ToCSS | resources.PostCSS }}
+      <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+    {{ end }}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-indigo-200 text-indigo-600">
+    {{ partial "header.html" . }}
+    <main class="mx-auto max-w-7xl py-8 px-4">
+      {{ block "main" . }}
+        
+      {{ end }}
+    </main>
+    {{ partial "footer" . }}
+  </body>
+</html>

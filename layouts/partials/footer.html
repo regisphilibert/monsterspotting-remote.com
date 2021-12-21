@@ -1,0 +1,10 @@
+<footer class="py-12 border-t border-indigo-700">
+  <div class="max-w-7xl mx-auto text-center">
+    <div>{{ i18n "copyright" }} {{ now.Format "2006" }}</div>
+    {{ with site.Params.credits }}
+    <div>
+      {{ $.RenderString . }}
+    </div>
+    {{ end }}
+  </div>
+</footer>

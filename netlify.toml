@@ -1,0 +1,8 @@
+[build]
+publish = "public"
+command = "cd remote && hugo && cd .. && hugo"
+
+[build.environment]
+  GO_VERSION = "1.16.5"
+  NODE_VERSION = "15.4.0"
+  HUGO_VERSION = "0.91.0"

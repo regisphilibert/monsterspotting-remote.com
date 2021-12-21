@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+  <div class="">
+    {{ getenv "HUGO_ENV" }}
+    <div class="col-span-4 mb-16 text-3xl md:text-5xl max-w-4xl mx-auto leading-snug text-center font-bold  ">
+      {{ .Content }}
+    </div>
+    <div class="col-span-6">
+      <div class="text-4xl mb-4 flex justify-between">
+        <div>Spot your monsters!</div>
+        {{ with site.GetPage "/monster" }}
+        <a href="{{ .RelPermalink }}" class="block">All Monsters -></a>
+        {{ end }}
+
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        {{ with where site.RegularPages "Type" "monster" }}
+          {{ with where . "Params.generation" 1 }}
+            {{ range . }}
+              {{ .Render "li" }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      </div>
+     </div>
+  </div>
+
+{{ end }}
