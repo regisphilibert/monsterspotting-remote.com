@@ -1,3 +1,4 @@
 #!/bin/bash
-
-cd remote && hugo
+# CloudCannon still at Hugo .89 ¯\_(ツ)_/¯
+# Will try again once it's at 91
+npm install && cd remote && hugo
