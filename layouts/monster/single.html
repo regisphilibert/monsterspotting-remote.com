@@ -2,7 +2,7 @@
   <div class="container mx-auto">
     <div class="md:grid grid-cols-2 gap-8">
       <div class="max-w-1/4 float-right p-8 md:max-w-none md:float-none md:p-0 md:order-1">
-        <div class="w-full">{{ .Params.svg | safeHTML }}</div>
+        <img class="block w-full" src="{{ .Params.img }}" />
       </div>
       <div>
         <h1 class=" text-4xl ">{{ .Title }}</h1>
